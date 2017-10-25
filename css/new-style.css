@@ -198,6 +198,24 @@ span.zasluga {
 	text-transform: uppercase;
 }
 
+.video-item {
+	margin-bottom: 50px;
+}
+
+.video-item iframe {
+	 width: 600px;
+   height: 350px;
+}
+
+.video-item h3 {
+	display: table;
+	font-size: 22px;
+	text-transform: uppercase;
+	border-bottom: 2px solid #fab702;
+	margin-bottom: 30px;
+	padding-bottom: 5px;
+}
+
 
 
 /*#section-typing {
