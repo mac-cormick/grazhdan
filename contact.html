@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/owl.theme.css" type="text/css">
     <link rel="stylesheet" href="css/owl.transitions.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/new-style.css" type="text/css">
     
     <!-- custom background -->
     <link rel="stylesheet" href="css/bg.css" type="text/css">
@@ -149,34 +150,38 @@
                 <form name="contactForm" id='contact_form' method="post" action='email.php'>
                     <div class="row">
                         <div class="col-md-4">
-                            <div id='name_error' class='error'>Please enter your name.</div>
+                            <div id='name_error' class='error'>Пожалуйста, введите Ваше имя.</div>
                             <div>
                                 <input type='text' name='name' id='name' class="form-control" placeholder="Ваше имя">
                             </div>
 
-                            <div id='email_error' class='error'>Please enter your valid E-mail ID.</div>
+                            <div id='email_error' class='error'>Пожалуйста, введите корректный E-mail.</div>
                             <div>
                                 <input type='text' name='email' id='email' class="form-control" placeholder="Ваш Email">
                             </div>
 
-                            <div id='phone_error' class='error'>Please enter your phone number.</div>
+                            <div id='phone_error' class='error'>Пожалуйста, введите номер телефона.</div>
                             <div>
                                 <input type='text' name='phone' id='phone' class="form-control" placeholder="Ваш телефон">
                             </div>
                         </div>
                         <div class="col-md-8">
-                            <div id='message_error' class='error'>Please enter your message.</div>
+                            <div id='message_error' class='error'>Пожалуйста, введите сообщение.</div>
                             <div>
                                 <textarea name='message' id='message' class="form-control" placeholder="Ваше сообщение"></textarea>
                             </div>
                         </div>
 
                         <div class="col-md-12">
+                          <input type="checkbox" id='checkbox' name="checkbox" value="checkbox" required> - <a class="oferta-href" href="/oferta">согласие на обработку персональных данных</a>
+                        </div>
+
+                        <div class="col-md-12">
                             <p id='submit'>
                                 <input type='submit' id='send_message' value='Отправить' class="btn btn-line">
                             </p>
-                            <div id='mail_success' class='success'>Your message has been sent successfully.</div>
-                            <div id='mail_fail' class='error'>Sorry, error occured this time sending your message.</div>
+                            <div id='mail_success' class='success'>Сообщение отправлено! Мы ответим Вам в самое ближайшее время.</div>
+                            <div id='mail_fail' class='error'>Ошибка отправки! Попробуйте позже...</div>
                         </div>
                     </div>
                 </form>

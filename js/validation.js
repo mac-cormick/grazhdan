@@ -11,7 +11,7 @@
 			var phone = $('#phone').val();
             var message = $('#message').val();
 			
-			$('#name,#email,#phone,#message').click(function(){
+			$('#name,#email,#phone,#message,#checkbox').click(function(){
 				$(this).removeClass("error_input");
 			});
             
@@ -40,11 +40,19 @@
             }else{
                 $('#message').removeClass("error_input");
             }
+            if(!$('#checkbox').prop('checked')){
+                var error = true;
+                $('#checkbox').addClass("error_input");
+                alert('Пожалуйста, подтвердите согласие на обработку персональных данных!')
+            }else{
+                $('#checkbox').removeClass("error_input");
+            }
+
             
             // If there is no validation error, next to process the mail function
             if(error == false){
                // Disable submit button just after the form processed 1st time successfully.
-                $('#send_message').attr({'disabled' : 'true', 'value' : 'Sending...' });
+                $('#send_message').attr({'disabled' : 'true', 'value' : 'Отправка...' });
                 
 				/* Post Ajax function of jQuery to get all the data from the submission of the form as soon as the form sends the values to email.php*/
                 $.post("email.php", $("#contact_form").serialize(),function(result){
